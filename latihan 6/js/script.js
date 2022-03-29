@@ -105,4 +105,37 @@ console.log(s);
 // Segita sama kaki terbalik //
 var s = '';
 var angka = '5';
+for (var i = 1; i <= angka; i++) {
+    for (var j = 1; j < i; j++) {
+        s += " ";
+    }
+    for (var k = angka; k >= (2 * i - angka); k--) {
+        s += "*"
+    }
+    s += '\n';
+}
+console.log(s);
 // Segitiga sama kaki terbalik //
+// Belah Ketupat //
+var s = '';
+var angka = '5';
+for (var i = 1; i <= angka; i++) {
+    for (var j = 1; j <= angka - i; j++) {
+        s += " ";
+    }
+    for (var k = 1; k <= i + (i - 1); k++) {
+        s += "*";
+    }
+    s += '\n';
+}
+for (var i = 1; i <= angka; i++) {
+    for (var j = 1; j < i; j++) {
+        s += " ";
+    }
+    for (var k = angka; k >= (2 * i - angka); k--) {
+        s += "*"
+    }
+    s += '\n';
+}
+console.log(s);
+// Belah Ketupat //
