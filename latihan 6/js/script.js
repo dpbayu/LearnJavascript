@@ -88,3 +88,21 @@ for (var i = 1; i <= angka; i++) {
 }
 console.log(s);
 // Bintang muncul dari kanan dan dari kecil ke besar & dari besar ke kecil //
+// Segitiga sama kaki //
+var s = '';
+var angka = '5';
+for (var i = 1; i <= angka; i++) {
+    for (var j = 1; j <= angka - i; j++) {
+        s += " ";
+    }
+    for (var k = 1; k <= i + (i - 1); k++) {
+        s += "*";
+    }
+    s += '\n';
+}
+console.log(s);
+// Segitiga sama kaki //
+// Segita sama kaki terbalik //
+var s = '';
+var angka = '5';
+// Segitiga sama kaki terbalik //
