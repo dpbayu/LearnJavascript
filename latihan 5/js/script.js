@@ -1,13 +1,13 @@
-var item = prompt('Masukkan nama makanan atau minuman : \n (Contoh: nasi, daging, susu, hamburger, softdrink )');
+var item = prompt('Masukkan nama makanan atau minuman : \n (Contoh: Nasi, Daging, Susu, Hamburger, Softdrink )');
 
 switch (item) {
-    case 'nasi':
-    case 'daging':
-    case 'susu':
+    case 'Nasi':
+    case 'Daging':
+    case 'Susu':
         alert('Makanan / minuman SEHAT!');
         break;
-    case 'hamburger':
-    case 'softdrink':
+    case 'Hamburger':
+    case 'Softdrink':
         alert('Makanan / minuman TIDAK SEHAT!');
         break;
     default:
