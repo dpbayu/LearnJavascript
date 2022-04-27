@@ -35,37 +35,29 @@
 // Game Suit //
 
 // Game Tebak Angka //
-// Kesempatan Bermain
 var attempt = 3;
-// Intro
-alert('Selamat Datang di Game Tebak Angka\nKamu akan diminta menebak angka 1 sampai 10\nKesempatan yang diberikan adalah sebanyak ' + attempt + ' kali\nLETS GO!!!');
-var tebak = true;
-while (tebak) {
-    // Kesempatan Bermain
+var tanya = true;
+while (tanya) {
     var kesempatan = attempt;
-    // Menangkap Pilihan User
-    var p = prompt('Kesempatan Pertama\nMasukkan angka 1 sampai 10');
-    // Menangkap Pilihan Komputer
-    var comp = Math.floor(Math.random() * 10) + 1;
-    // Menampilkan Hasil
+    var p = prompt('Kesempatan pertama \nPilihlah angka dari 1 hingga 10');
+    var compt = Math.floor(Math.random() * 10) + 1;
     for (kesempatan; kesempatan > 1; kesempatan--) {
-        if (p == comp) {
-            ''
-        } else if (p < comp && p > 0) {
-            var p = prompt('Tebakan kamu kurang besar\nKesempatan ' + [kesempatan - 1] + ' kali lagi');
-        } else if (p > comp && p <= 10) {
-            var p = prompt('Tebakan kamu kurang kecil\nkesempatan = ' + [kesempatan - 1] + ' kali lagi');
+        if (p == compt) {
+            '';
+        } else if (p < compt) {
+            var p = prompt('Tebakan yang anda masukan terlalu RENDAH \n' + [kesempatan - 1] + ' kesempatan lagi');
+        } else if (p > compt) {
+            var p = prompt('Tebakan yang anda masukan terlalu TINGGI \n' + [kesempatan - 1] + ' kesempatan lagi');
         } else {
-            var p = prompt('Harap masukkan angka 1 sampai 10\nkesempatan = ' + [kesempatan - 1] + ' kali lagi');
+            var p = prompt('Anda memasukan angka yang salah');
         }
     }
-    // Hasil Akhir
-    if (p == comp) {
-        alert('HEBAT!!!\nTebakan kamu benar\nAngka yang dicari adalah ' + comp);
+    if (p == compt) {
+        alert('Anda BENAR \nAnda memasukan angka yang tepat yaitu ' + compt);
     } else {
-        alert('GAME OVER\nAngka yang dicari adalah ' + comp);
+        alert('GAME OVER\nAngka yang dicari adalah ' + compt);
     }
-    var tebak = confirm('Ingin bermain lagi?');
+    tanya = confirm('Anda mau main lagi ?')
 }
-alert('Terimakasih telah bermain');
-// Game Tebak Angka //
+alert('Terima Kasih telah bermain.');
+// Tebak Angka //
