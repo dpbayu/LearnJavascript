@@ -25,5 +25,6 @@ window.onclick = (event) => {
         const modals = document.querySelectorAll(".modal");
         modals.forEach((modal) => modal.classList.remove("active"));
         overlay.classList.remove("active");
+        document.body.classList.remove("disable-scroll")
     }
 };
