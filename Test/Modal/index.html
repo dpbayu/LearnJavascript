@@ -8,17 +8,119 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Modal</title>
     <style>
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
 
+        .disable-scroll {
+            overflow: hidden;
+        }
+
+        .container {
+            width: 992px;
+            margin: 0 auto;
+        }
+
+        .btn {
+            padding: 0.5rem 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .btn:active {
+            transform: scale(0.9);
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+        }
+
+        .modal {
+            width: 450px;
+            position: fixed;
+            top: -50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: top 0.3s ease-in-out;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            z-index: 2;
+            background-color: #fff;
+        }
+
+        .modal.active {
+            top: 15%;
+        }
+
+        .modal .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+            padding: 0.5rem;
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        .modal .body {
+            padding: 0.75rem;
+        }
+
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        #overlay.active {
+            display: block;
+        }
     </style>
 </head>
 
 <body>
     <div class="bg-rose-400 w-full h-96"></div>
-    <div class="bg-rose-400 w-full h-96"></div>
-    <div class="bg-rose-400 w-full h-96"></div>
-    <div class="bg-rose-400 w-full h-96"></div>
-    <div class="bg-rose-400 w-full h-96"></div>
+    <div class="bg-orange-400 w-full h-96"></div>
+    <div class="bg-blue-400 w-full h-96"></div>
+    <div class="bg-yellow-400 w-full h-96"></div>
+    <div class="bg-slate-400 w-full h-96"></div>
+    <div class="container">
+        <button class="btn" data-target="#modal1">Open Modal</button>
+        <button class="btn" data-target="#modal2">Open Modal 2</button>
+    </div>
 
+    <div class="modal" id="modal1">
+        <div class="header">
+            <div class="title">First Modal</div>
+            <button class="btn close-modal">&times;</button>
+        </div>
+        <div class="body">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere ea
+            officia consectetur. Laborum, dolor? Assumenda quo corrupti eveniet
+            velit fugit fugiat odit, dolorum labore obcaecati quia. Commodi
+            assumenda sed maxime!
+        </div>
+    </div>
+    <div class="modal" id="modal2">
+        <div class="header">
+            <div class="title">Second Modal</div>
+            <button class="btn close-modal">&times;</button>
+        </div>
+        <div class="body">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere ea
+            officia consectetur. Laborum, dolor? Assumenda quo corrupti eveniet
+            velit fugit fugiat odit, dolorum labore obcaecati quia. Commodi
+            assumenda sed maxime!
+        </div>
+    </div>
+    <div id="overlay"></div>
 </body>
 <script src="./js/script.js"></script>
 

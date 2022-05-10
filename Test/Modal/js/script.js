@@ -1,21 +1,29 @@
-var modalBtns = [...document.querySelectorAll(".modal-toggle")];
-modalBtns.forEach(function(btn){
-  btn.onclick = function() {
-    var modal = btn.getAttribute('data-modal');
-    document.getElementById(modal).style.display = "block";
-  }
+const btns = document.querySelectorAll("[data-target]");
+const close_modals = document.querySelectorAll(".close-modal");
+const overlay = document.getElementById("overlay");
+
+
+btns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        document.querySelector(btn.dataset.target).classList.add("active");
+        overlay.classList.add("active");
+        document.body.classList.add("disable-scroll")
+    });
 });
 
-var closeBtns = [...document.querySelectorAll(".modal-close")];
-closeBtns.forEach(function(btn){
-  btn.onclick = function() {
-    var modal = btn.closest('.modal');
-    modal.style.display = "none";
-  }
+close_modals.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        const modal = btn.closest(".modal");
+        modal.classList.remove("active");
+        overlay.classList.remove("active");
+        document.body.classList.remove("disable-scroll")
+    });
 });
 
-window.onclick = function(event) {
-  if (event.target.className === "modal") {
-    event.target.style.display = "none";
-  }
-}
+window.onclick = (event) => {
+    if (event.target == overlay) {
+        const modals = document.querySelectorAll(".modal");
+        modals.forEach((modal) => modal.classList.remove("active"));
+        overlay.classList.remove("active");
+    }
+};
