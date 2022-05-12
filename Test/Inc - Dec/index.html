@@ -2,14 +2,16 @@
 <html>
 
 <head>
-	<link rel="stylesheet" type="text/css" href="style.css">
 	<title>Increament / Decreament</title>
+	<script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
-	<button id="sub">-</button>
-	<input type="text" id="qtyBox" readonly="" value="0">
-	<button id="add">+</button>
+	<div class="flex p-20">
+		<button class="mx-5" id="sub">-</button>
+		<input class="w-10" type="text" id="qtyBox" readonly="" value="0">
+		<button class="mx-5" id="add">+</button>
+	</div>
 
 	<script src="./js/script.js"></script>
 </body>
