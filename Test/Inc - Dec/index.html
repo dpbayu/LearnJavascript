@@ -6,13 +6,52 @@
 	<script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-	<div class="flex p-20">
+<body class="w-full flex flex-col items-center justify-center h-screen">
+	<!-- First -->
+	<!-- <div class="flex p-20">
 		<button class="mx-5" id="sub">-</button>
 		<input class="w-10" type="text" id="qtyBox" readonly="" value="0">
 		<button class="mx-5" id="add">+</button>
-	</div>
+	</div> -->
+	<!-- First -->
 
+	<!-- Second -->
+	<!-- <button onclick="totalClick(1)">Tambah</button>
+	<span id="totalClicks">0</span>
+	<button onclick="totalClick(-1)">Kurang</button>
+	<button onclick="totalClick1(1)">Tambah</button>
+	<span id="totalClicks1">0</span>
+	<button onclick="totalClick1(-1)">Kurang</button> -->
+	<!-- Second -->
+
+	<!-- Third -->
+	<h1 class="text-slate-500 text-center text-3xl">INCREMENT & DECREMENT FOR MULTIPLE FIELDS</h1>
+	<div class="bg-white flex gap-5 items-center justify-center p-5 my-5 rounded-md border shadow-lg">
+		<label for="name">MALES : </label>
+		<div class="dec w-5 border flex items-center justify-center cursor-pointer">-</div>
+		<input type="text" id="1" value="0" class="input_field w-10 border text-center">
+		<div class="inc w-5 border flex items-center justify-center cursor-pointer">+</div>
+	</div>
+	<div class="bg-white flex gap-5 items-center justify-center p-5 my-5 rounded-md border shadow-lg">
+		<label for="name">FEMALES : </label>
+		<div class="dec w-5 border flex items-center justify-center cursor-pointer">-</div>
+		<input type="text" id="2" value="0" class="input_field w-10 border text-center">
+		<div class="inc w-5 border flex items-center justify-center cursor-pointer">+</div>
+	</div>
+	<div class="bg-white flex gap-5 items-center justify-center p-5 my-5 rounded-md border shadow-lg">
+		<label for="name">CHILDRENS : </label>
+		<div class="dec w-5 border flex items-center justify-center cursor-pointer">-</div>
+		<input type="text" id="3" value="0" class="input_field w-10 border text-center">
+		<div class="inc w-5 border flex items-center justify-center cursor-pointer">+</div>
+	</div>
+	<div class="box bg-white flex gap-5 items-center justify-center p-5 my-5 rounded-md border shadow-lg">
+		<label for="name">INFANTS : </label>
+		<div class="dec w-5 border flex items-center justify-center cursor-pointer">-</div>
+		<input type="text" id="4" value="0" class="input_field w-10 border text-center">
+		<div class="inc w-5 border flex items-center justify-center cursor-pointer">+</div>
+	</div>
+	<!-- Third -->
+	
 	<script src="./js/script.js"></script>
 </body>
 
