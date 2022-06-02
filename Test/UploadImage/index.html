@@ -11,39 +11,43 @@
 </head>
 
 <body class="flex flex-col h-full justify-center items-center gap-10">
-    <!-- Version 1 -->
-    <!-- <input type="file" id="image_input" accept="image/png, image/jpg">
-    <div id="display_image" class="w-[375px] h-[500px] border border-black bg-cover"></div> -->
-    <!-- Version 1 -->
-    <!-- Version 2 -->
-    <div class="flex flex-col justify-center items-center mt-56">
-        <h1 class="">Upload image!</h1>
-        <div class="file-upload">
-            <div class="image-box relative overflow-hidden rounded-lg h-44 w-44 cursor-pointer">
-                <div class="flex justify-center items-center">
-                    <div
-                        class="bg-cover relative flex bg-rose-100 h-36 w-36 rounded-full flex justify-center items-center shadow-lg">
-                        <svg class="w-36 h-36 fill-current text-secondary" viewBox="0 0 24 24">
-                            <circle cx="12" cy="8" r="4" />
-                            <path d="M20,19v1a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V19a6,6,0,0,1,6-6h4A6,6,0,0,1,20,19Z" />
-                        </svg>
-                        <svg class="absolute bottom-0 bg-rose-50 fill-current text-secondary rounded-full p-1 right-0 h-10 w-10"
-                            viewBox="0 0 512 512">
-                            <path
-                                d="M430.4,147h-67.5l-40.4-40.8c0,0-0.2-0.2-0.3-0.2l-0.2-0.2v0c-6-6-14.1-9.8-23.3-9.8h-84c-9.8,0-18.5,4.2-24.6,10.9l0,0.1   l-39.5,40H81.6C63,147,48,161.6,48,180.2v202.1c0,18.6,15,33.7,33.6,33.7h348.8c18.5,0,33.6-15.1,33.6-33.7V180.2   C464,161.6,448.9,147,430.4,147z M256,365.5c-50.9,0-92.4-41.6-92.4-92.6c0-51.1,41.5-92.6,92.4-92.6c51,0,92.4,41.5,92.4,92.6   C348.4,323.9,307,365.5,256,365.5z M424.1,200.5c-7.7,0-14-6.3-14-14.1s6.3-14.1,14-14.1c7.7,0,14,6.3,14,14.1   S431.8,200.5,424.1,200.5z" />
-                            <path
-                                d="M256,202.9c-38.6,0-69.8,31.3-69.8,70c0,38.6,31.2,70,69.8,70c38.5,0,69.8-31.3,69.8-70C325.8,234.2,294.5,202.9,256,202.9   z" />
-                        </svg>
+    <div class="flex">
+        <!-- Version 1 -->
+        <div class="mt-10 flex-col flex gap-10">
+            <input type="file" id="image_input" accept="image/jpg">
+            <div id="display_image" class="w-56 h-56 border border-black bg-cover"></div>
+        </div>
+        <!-- Version 1 -->
+        <!-- Version 2 -->
+        <div class="flex flex-col justify-center items-center mt-5 gap-10">
+            <h1>Upload image!</h1>
+            <div class="file-upload">
+                <div class="image-box relative overflow-hidden rounded-lg h-44 w-44 cursor-pointer">
+                    <div class="flex justify-center items-center">
+                        <div
+                            class="bg-cover relative flex bg-rose-100 h-36 w-36 rounded-full flex justify-center items-center shadow-lg">
+                            <svg class="w-36 h-36 fill-current text-secondary" viewBox="0 0 24 24">
+                                <circle cx="12" cy="8" r="4" />
+                                <path d="M20,19v1a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V19a6,6,0,0,1,6-6h4A6,6,0,0,1,20,19Z" />
+                            </svg>
+                            <svg class="absolute bottom-0 bg-rose-50 fill-current text-secondary rounded-full p-1 right-0 h-10 w-10"
+                                viewBox="0 0 512 512">
+                                <path
+                                    d="M430.4,147h-67.5l-40.4-40.8c0,0-0.2-0.2-0.3-0.2l-0.2-0.2v0c-6-6-14.1-9.8-23.3-9.8h-84c-9.8,0-18.5,4.2-24.6,10.9l0,0.1   l-39.5,40H81.6C63,147,48,161.6,48,180.2v202.1c0,18.6,15,33.7,33.6,33.7h348.8c18.5,0,33.6-15.1,33.6-33.7V180.2   C464,161.6,448.9,147,430.4,147z M256,365.5c-50.9,0-92.4-41.6-92.4-92.6c0-51.1,41.5-92.6,92.4-92.6c51,0,92.4,41.5,92.4,92.6   C348.4,323.9,307,365.5,256,365.5z M424.1,200.5c-7.7,0-14-6.3-14-14.1s6.3-14.1,14-14.1c7.7,0,14,6.3,14,14.1   S431.8,200.5,424.1,200.5z" />
+                                <path
+                                    d="M256,202.9c-38.6,0-69.8,31.3-69.8,70c0,38.6,31.2,70,69.8,70c38.5,0,69.8-31.3,69.8-70C325.8,234.2,294.5,202.9,256,202.9   z" />
+                            </svg>
+                        </div>
                     </div>
+                    <img class="rounded-full w-full h-full bg-cover hidden absolute top-0 left-0" alt="profile">
                 </div>
-                <img class="rounded-full w-full h-full bg-cover hidden absolute top-0 left-0" alt="profile">
-            </div>
-            <div class="controls hidden">
-                <input type="file" />
+                <div class="controls hidden">
+                    <input type="file" />
+                </div>
             </div>
         </div>
+        <!-- Version 2 -->
     </div>
-    <!-- Version 2 -->
     <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src="script.js"></script>
 </body>
