@@ -7,12 +7,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Warna</title>
     <style>
+        html,body{
+            height: 100%;
+        }
         body {
             text-align: center;
         }
+
         .darkblue {
             background-color: darkblue;
             color: white;
+        }
+
+        .kotak {
+            height: 25px;
+            width: 25px;
+            margin: 20px auto;
+        }
+
+        .merah {
+            background-color: red;
+        }
+
+        .hijau {
+            background-color: green;
+        }
+
+        .biru {
+            background-color: blue;
         }
     </style>
 </head>
@@ -20,6 +42,13 @@
 <body>
     <h1>Bermain dengan warna</h1>
     <button type="button" id="tUbahWarna">Ubah Warna</button>
+
+    <div class="kotak merah"></div>
+    <input type="range" name="sMerah" min="0" max="255">
+    <div class="kotak hijau"></div>
+    <input type="range" name="sHijau" min="0" max="255">
+    <div class="kotak biru"></div>
+    <input type="range" name="sBiru" min="0" max="255">
 </body>
 <script src="script.js"></script>
 
