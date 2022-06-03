@@ -1,4 +1,4 @@
-// Event P2
+// Event P2 (Handler)
 const p2 = document.querySelector('.p2');
 p2.onclick = ubahWarnaP2;
 
@@ -8,7 +8,7 @@ function ubahWarnaP2() {
     p2.style.fontWeight = '800';
 }
 
-// Event P3
+// Event P3 (addEventListener)
 const p3 = document.querySelector('.p3');
 // function ubahWarnaP3() {
 //     p3.style.backgroundColor = 'lightblue';
@@ -23,7 +23,7 @@ p3.addEventListener('mouseleave', function () {
     p3.style.color = 'black';
 })
 
-// Event P4
+// Event P4 (addEventListener)
 const p4 = document.querySelector('section#b p');
 p4.addEventListener('click', function () {
     const ul = document.querySelector('section#b ul');
