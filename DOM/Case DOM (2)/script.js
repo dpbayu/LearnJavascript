@@ -12,6 +12,21 @@ function getHasil(comp, player) {
     if (player == 'semut') return (comp == 'orang') ? 'KALAH!' : 'MENANG';
 }
 
+function putar() {
+    const imgComputer = document.querySelector('.img-computer');
+    const gambar = ['gajah', 'semut', 'orang'];
+    let i = 0;
+    const waktuMulai = new Date().getTime();
+    setInterval(function () {
+        if (new Date().getTime() - waktuMulai > 1000) {
+            clearInterval;
+            return;
+        }
+        imgComputer.setAttribute('src', '/DOM/Case DOM (2)/img/' + gambar[i++] + '.png');
+        if (i == gambar.length) i = 0;
+    }, 100);
+};
+
 const pilihan = document.querySelectorAll('li img');
 pilihan.forEach(function (pil) {
     pil.addEventListener('click', function () {
@@ -19,15 +34,15 @@ pilihan.forEach(function (pil) {
         const pilihanComputer = getPilihanComputer();
         const pilihanPlayer = pil.className;
         const hasil = getHasil(pilihanComputer, pilihanPlayer);
-        // Ganti gambar sesuai pilihan komputer
-        const imgComputer = document.querySelector('.img-computer');
-        imgComputer.setAttribute('src', '/DOM/Case DOM (2)/img/' + pilihanComputer + '.png');
-        // Munculin hasil            
-        const info = document.querySelector('.info');
-        info.innerHTML = hasil;
-        // console.log('comp :' + pilihanComputer);
-        // console.log('player :' + pilihanPlayer);
-        // console.log('hasil : ' + hasil);
+        putar();
+        setTimeout(function () {
+            // Ganti gambar sesuai pilihan komputer
+            const imgComputer = document.querySelector('.img-computer');
+            imgComputer.setAttribute('src', '/DOM/Case DOM (2)/img/' + pilihanComputer + '.png');
+            // Munculin hasil            
+            const info = document.querySelector('.info');
+            info.innerHTML = hasil;
+        }, 1000);
     });
 });
 
