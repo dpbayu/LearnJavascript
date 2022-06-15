@@ -4,13 +4,17 @@
     box-sizing: border-box;
 }
 
-.testing {
-    margin-top: 100px;
-    display: flex;
-    justify-content: center;
+.testing .side {
+    margin: 100px auto;
+    position: relative;
+    height: 50px;
+    width: 200px;
 }
 
 .testing .one {
+    position: absolute;
+    top: 0;
+    left: 0;
     background-color: red;
     margin: 0 10px;
     height: 20px;
@@ -18,6 +22,9 @@
 }
 
 .testing .two {
+    position: absolute;
+    top: 0;
+    right: 0;
     background-color: blue;
     margin: 0 10px;
     height: 20px;
@@ -27,18 +34,47 @@
 .testing .search {
     position: absolute;
     top: 0;
-    left
-    display: flex;
-    justify-content: end;
+    left: 50px;
     align-items: center;
     height: 20px;
     width: 100px;
     border: 2px solid green;
+    display: none;
 }
 
-.testing .search .icon {
-    margin-right: 5px;
+.testing .search .icon-search {
+    margin-left: 83px;
+    margin-top: 3px;
     height: 10px;
     width: 10px;
     background-color: greenyellow;
+}
+
+.testing .logo {
+    margin: 0 75px;
+    height: 20px;
+    width: 50px;
+    background-color: yellow;
+}
+
+.testing .icon {
+    position: absolute;
+    left: 80px;
+    top: 0;
+    margin: 0 75px;
+    height: 20px;
+    width: 10px;
+    background-color: green;
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+    .icon {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 426px) {
+    .icon {
+        display: none;
+    }
 }
