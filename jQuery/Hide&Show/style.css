@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.testing {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.testing .one {
+    background-color: red;
+    margin: 0 10px;
+    height: 20px;
+    width: 20px;
+}
+
+.testing .two {
+    background-color: blue;
+    margin: 0 10px;
+    height: 20px;
+    width: 20px;
+}
+
+.testing .search {
+    position: absolute;
+    top: 0;
+    left
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 20px;
+    width: 100px;
+    border: 2px solid green;
+}
+
+.testing .search .icon {
+    margin-right: 5px;
+    height: 10px;
+    width: 10px;
+    background-color: greenyellow;
+}
