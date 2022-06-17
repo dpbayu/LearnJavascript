@@ -38,7 +38,7 @@ pilihan.forEach(function (pil) {
         setTimeout(function () {
             // Ganti gambar sesuai pilihan komputer
             const imgComputer = document.querySelector('.img-computer');
-            imgComputer.setAttribute('src', '/DOM/Case DOM (2)/img/' + pilihanComputer + '.png');
+            imgComputer.setAttribute('src', 'img/' + pilihanComputer + '.png');
             // Munculin hasil            
             const info = document.querySelector('.info');
             info.innerHTML = hasil;
