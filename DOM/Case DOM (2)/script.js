@@ -22,7 +22,7 @@ function putar() {
             clearInterval;
             return;
         }
-        imgComputer.setAttribute('src', '/DOM/Case DOM (2)/img/' + gambar[i++] + '.png');
+        imgComputer.setAttribute('src', 'img/' + gambar[i++] + '.png');
         if (i == gambar.length) i = 0;
     }, 100);
 };
